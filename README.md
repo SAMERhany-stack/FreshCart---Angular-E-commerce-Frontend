@@ -1,59 +1,39 @@
-# ECommerce
+# FreshCart - Angular E-commerce Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+![Project Screenshot](public/assets/images/freshcart-logo.svg)
 
-## Development server
+## Overview
+FreshCart is a modern, high-performance **e-commerce frontend** built with **Angular 19** and **Tailwind CSS**, featuring secure user authentication, modular architecture, and an interactive UI with notifications and alerts.
 
-To start a local development server, run:
+This project serves as a fully responsive shopping platform where users can browse products, manage their cart, and perform secure checkout operations.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Features
 
-## Code scaffolding
+- **Secure Authentication:** Registration and login with strong password validation using Regex.
+- **Product Management:** Browse products, categories, and detailed product pages.
+- **Cart & Checkout:** Add products to cart, manage quantities, and checkout seamlessly.
+- **Notifications & Alerts:** Interactive notifications with **SweetAlert2** and **ngx-toastr**.
+- **Responsive UI:** Fully responsive layouts built with Tailwind CSS.
+- **Reusable Components:** Modular structure using Angular services, guards, and layouts.
+- **Icons & Typography:** FontAwesome icons and Google Fonts integrated for a modern look.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## Tech Stack
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Frontend:** Angular 19, SCSS, Tailwind CSS
+- **Libraries:** SweetAlert2, ngx-toastr, FontAwesome, Google Fonts
+- **Tools:** Angular CLI, Node.js, npm
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## Installation
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Clone the repository and install dependencies:
 
 ```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+git clone <your-repo-url>
+cd e-commerce
+npm install

@@ -1,0 +1,32 @@
+<section>
+  <h2 class="text-3xl pb-2 font-bold text-green-700">Our Categories</h2>
+  <h6 class="pb-4">
+    You can see our categories and each category includes the products in it
+  </h6>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+    @for (categ of categorie; track categ.id) {
+    <div
+      class="card border border-green-400/50 rounded-md overflow-hidden shadow-xl relative"
+    >
+      <div>
+        <div class="card-img border-b-2">
+          <img
+            [src]="categ.image"
+            class="w-full h-[250px] object-contain"
+            [alt]="categ.name"
+          />
+        </div>
+        <div
+          [routerLink]="['/specific-category', categ._id]"
+          class="card-body px-2 py-4 text-center cursor-pointer"
+        >
+          <h2 class="font-medium text-green-500">
+            {{ categ.name.split(" ", 2).join(" ") }}
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    }
+  </div>
+</section>

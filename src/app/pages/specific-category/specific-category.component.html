@@ -1,0 +1,29 @@
+<div
+  class="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-50"
+>
+  <!-- Left side (images) -->
+  <div class="flex items-center justify-center space-x-8">
+    <img
+      *ngIf="categoryDetails"
+      [src]="categoryDetails?.image"
+      [alt]="categoryDetails?.name"
+      class="w-80 h-auto object-contain rounded-md shadow-lg"
+    />
+  </div>
+
+  <!-- Right side (text) -->
+  <div class="mt-10 md:mt-0 md:ml-12 text-center md:text-left">
+    <h2 class="text-4xl font-bold text-green-600 mb-4">
+      {{ categoryDetails?.name }}
+    </h2>
+    <p class="text-gray-600 mb-2">{{ categoryDetails?.createdAt }}</p>
+    <p class="text-gray-600">{{ categoryDetails?.updatedAt }}</p>
+    <button
+      *ngIf="categoryDetails"
+      routerLink="/categories"
+      class="bg-green-600 px-6 mt-4 py-2 rounded border text-white my-1 block w-[100%] mx-auto hover:bg-green-700 transition-colors duration-200"
+    >
+      ← Back to Categories
+    </button>
+  </div>
+</div>

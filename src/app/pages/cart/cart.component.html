@@ -1,0 +1,65 @@
+@if (cartDetails.totalCartPrice) {
+<section class="w-3/4 bg-gray-50 border shadow mx-auto p-2">
+  <h1 class="text-4xl pb-4">Shop Cart:</h1>
+  <div class="flex justify-between">
+    <div>
+      <span class="text-green-600"
+        >Total Cart Price: {{ cartDetails.totalCartPrice }}</span
+      >
+    </div>
+    <div class="pe-8">
+      <button
+        class="bg-red-900 rounded-sm text-white p-1"
+        (click)="deletAllProducts()"
+      >
+        Clear Cart
+      </button>
+    </div>
+  </div>
+
+  @for (product of cartDetails.products; track product.product.id) {
+  <div class="grid md:grid-cols-[10%_minmax(0,1fr)] pt-2 items-center">
+    <div>
+      <img
+        [src]="product.product.imageCover"
+        class="h[100px] object-contain w-full"
+        [alt]="product.product.title"
+      />
+    </div>
+    <div class="flex w-full items-center justify-between px-8">
+      <div>
+        <p>{{ product.product.title }}</p>
+        <span>Price : {{ product.price }} </span>
+        <button
+          class="flex items-center"
+          (click)="removeItem(product.product.id)"
+        >
+          <i class="fas fa-trash-can text-green-600 pe-1"></i>Remove
+        </button>
+      </div>
+      <div class="flex items-center gap-3 justify-center">
+        <button
+          class="flex items-center"
+          (click)="increaseProduct(product.product.id, product.count + 1)"
+        >
+          <i class="fa-regular fa-square-plus text-green-600 text-xl"></i>
+        </button>
+        <span class="text-lg">{{ product.count }}</span>
+        <button
+          class="flex items-center"
+          (click)="decreaseProduct(product.product.id, product.count - 1)"
+        >
+          <i class="fa-regular fa-square-minus text-green-600 text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  }
+  <button class="btn-main" [routerLink]="['/checkout', cartDetails._id]">
+    Payment
+  </button>
+</section>
+
+} @else {
+<h1 class="text-red-900 text-center">NOO Data Founded</h1>
+}

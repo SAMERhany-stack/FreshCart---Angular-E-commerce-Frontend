@@ -1,0 +1,29 @@
+<section>
+  <h2 class="text-3xl pb-2 font-bold text-green-700">Our Brands</h2>
+  <h6 class="pb-4">
+    You can see our brands and each brand includes the products in it
+  </h6>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+    @for (brand of Brands; track brand._id) {
+    <div
+      [routerLink]="['/brands-detailes', brand._id]"
+      class="card border rounded-xl overflow-hidden shadow-xl relative cursor-pointer"
+    >
+      <div>
+        <div class="card-img">
+          <img
+            [src]="brand.image"
+            class="w-full h-[250px] object-contain"
+            [alt]="brand.name"
+          />
+        </div>
+        <div class="card-body px-2 py-4">
+          <h4 class="text-green-500 text-lg font-bold text-center">
+            {{ brand.name }}
+          </h4>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>

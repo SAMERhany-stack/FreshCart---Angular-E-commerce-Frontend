@@ -11,13 +11,18 @@ This project serves as a fully responsive shopping platform where users can brow
 
 ## Features
 
-- **Secure Authentication:** Registration and login with strong password validation using Regex.
-- **Product Management:** Browse products, categories, and detailed product pages.
-- **Cart & Checkout:** Add products to cart, manage quantities, and checkout seamlessly.
-- **Notifications & Alerts:** Interactive notifications with **SweetAlert2** and **ngx-toastr**.
-- **Responsive UI:** Fully responsive layouts built with Tailwind CSS.
-- **Reusable Components:** Modular structure using Angular services, guards, and layouts.
-- **Icons & Typography:** FontAwesome icons and Google Fonts integrated for a modern look.
+- **Secure Authentication:** Registration and login with strong password validation using Regex, JWT-based authentication for secure sessions.  
+- **Single Page Application (SPA):** Built as an SPA with Angular for fast and seamless navigation without page reloads.  
+- **Lazy Loading:** Modules are lazy-loaded to improve initial load time and optimize performance.  
+- **Product Management:** Browse products, categories, and detailed product pages efficiently.  
+- **Cart & Checkout:** Add products to cart, manage quantities, and checkout seamlessly with validations.  
+- **Notifications & Alerts:** Interactive notifications using **SweetAlert2** and **ngx-toastr**.  
+- **Responsive UI:** Fully responsive layouts built with Tailwind CSS for desktop, tablet, and mobile.  
+- **Reusable Components:** Modular structure using Angular services, guards, and layouts to ensure maintainability.  
+- **Performance Optimizations:** Efficient state management and code splitting to enhance performance.  
+- **Security Enhancements:** Input validation, route guards, and protection against common vulnerabilities.  
+- **Icons & Typography:** FontAwesome icons and Google Fonts integrated for a modern look.  
+- **Cross-Browser Compatible:** Works seamlessly across major browsers.
 
 ---
 

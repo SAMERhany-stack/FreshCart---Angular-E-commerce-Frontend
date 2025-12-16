@@ -30,7 +30,7 @@ This project serves as a fully responsive shopping platform where users can brow
 
 - **Frontend:** Angular 19, SCSS, Tailwind CSS
 - **Libraries:** SweetAlert2, ngx-toastr, FontAwesome, Google Fonts
-- **Tools:** Angular CLI, Node.js, npm
+- **Tools:** Angular CLI , npm
 
 ---
 

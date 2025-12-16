@@ -64,7 +64,8 @@ export const routes: Routes = [
             { 
                 path: "checkout/:id",
                 title: "Checkout",
-                loadComponent: () => import('./pages/checkout/checkout.component').then(m => m.CheckoutComponent)
+                loadComponent: () => import('./pages/checkout/checkout.component').then(m => m.CheckoutComponent),
+                data: { prerender: false }
             },
             { 
                 path: "details/:id",
@@ -74,7 +75,8 @@ export const routes: Routes = [
             { 
                 path: "specific-category/:_id",
                 title: "specific-category",
-                loadComponent: () => import('./pages/specific-category/specific-category.component').then(m => m.SpecificCategoryComponent)
+                loadComponent: () => import('./pages/specific-category/specific-category.component').then(m => m.SpecificCategoryComponent),
+                data: { prerender: false }
             },
             { 
                 path: "brands-detailes/:_id",
